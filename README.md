@@ -18,23 +18,24 @@ The goal was to turn ~14,700 raw order records into trustworthy data and a clear
 The raw dataset contained the six most common data-quality problems. Each was diagnosed before being fixed:
 
 - **Missing values** — filled numeric gaps with the median, text gaps with `"Unknown"`
-- **Duplicates** — removed 1,115 duplicate rows (only detectable *after* standardizing text and types)
+- **Duplicates** — removed duplicate rows that were only detectable *after* standardizing text and types
 - **Impossible values** — negative and zero delivery times, plus a `999` sentinel value, converted to blanks then handled
 - **Inconsistent text** — standardized casing, whitespace, and abbreviations (e.g. `Sthlm` → `Stockholm`)
 - **Wrong data types** — converted currency text (`"248 kr"`, `"270,0"`) to numbers, and mixed-format text dates to proper datetimes
 
-Result: a clean dataset of ~13,600 reliable records.
+Result: a clean, reliable dataset ready for analysis.
 
 ## Key KPIs
 
-- **Total revenue:** 3,408,647 SEK
+- **Total revenue:** ~3,454,554 SEK
 - **Average delivery time:** 37.8 minutes
-- **On-time delivery rate:** ~83% (17% late)
-- **Top cities by revenue:** Stockholm, Göteborg, Uppsala
-- **Top cuisines by revenue:** Pizza, Burgers, Sushi
-- **Returning-customer share** and per-category breakdowns
+- **On-time delivery rate:** ~83% (17.1% late)
+- **Top 3 cities by revenue:** Stockholm, Göteborg, Malmö
+- **Top 3 cuisines by revenue:** Pizza, Burgers, Sushi
 
 ## Power BI Dashboard
+
+![Dashboard](dashboard.png)
 
 An interactive dashboard presents the KPIs with cards, charts, and slicers for filtering by city, cuisine, and customer type. Measures were built in DAX (`SUM`, `AVERAGE`, `COUNTROWS`, `CALCULATE`, `DIVIDE`).
 
