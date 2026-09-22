@@ -25,6 +25,10 @@ The raw dataset contained the six most common data-quality problems. Each was di
 
 Result: a clean, reliable dataset ready for analysis.
 
+## Reusable Pipeline
+
+All cleaning steps are wrapped in a single `clean_orders()` function, so a new monthly file can be cleaned in one line rather than re-running every step. Fill values (e.g. the median) are recalculated on each run, so the process adapts to new data automatically.
+
 ## Key KPIs
 
 - **Total revenue:** ~3,454,554 SEK
