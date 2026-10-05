@@ -1,4 +1,4 @@
-# Food Delivery Data — Cleaning & KPI Analysis
+# Food Delivery Data- Cleaning & KPI Analysis
 
 A data cleaning and analysis project on a food-delivery order dataset, built with **Python (pandas)** and **Power BI**. The project takes a raw, messy dataset through a full cleaning pipeline and produces business KPIs and a manager-facing dashboard.
 
